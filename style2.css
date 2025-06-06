@@ -1,0 +1,477 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /*----- Header ------*/
+.header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+
+    /*----- Contenido Header ------*/
+    .nav ul {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav a:hover {
+      color: #e91e63;
+    }
+
+    .nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(45deg, #e91e63, #ff6b9d);
+      transition: width 0.3s ease;
+    }
+
+    .nav a:hover::after {
+      width: 100%;
+    }
+
+    /*----- Contenido Centro ------*/
+     .centro {
+      height: 100vh;
+      background: #5d73d4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contenido-centro {
+      z-index: 2;
+      max-width: 800px;
+      padding: 0 2rem;
+    }
+
+    .centro h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .centro p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    /*------ Botón Centro ------*/
+    .btn-principal {
+      display: inline-block;
+      background: #e91e63;
+      color: white;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .btn-principal:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(233, 30, 99, 0.4);
+    }
+
+    /*------ Sección Servicios ------*/
+    .seccion-servicios {
+      padding: 5rem 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .subtitulo {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: #333;
+      position: relative;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .subtitulo::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: #e91e63;
+      border-radius: 2px;
+    }
+
+    /*------ Servicios ------*/
+    .nuestros-servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .servicio {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      border: 1px solid #f0f0f0;
+    }
+
+    .servicio:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+
+    .servicio i {
+      font-size: 3rem;
+      color: #e91e63;
+      margin-bottom: 1rem;
+    }
+
+    .servicio h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .servicio p {
+      color: #666;
+      line-height: 1.6;
+    }
+
+/*------ FAQ ------*/
+    .seccion-preguntas {
+      background: #ebedf3 100%;
+      padding: 5rem 3rem;
+    }
+
+    .contenedor-preguntas {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .caja-pregunta {
+      background: white;
+      margin-bottom: 1rem;
+      border-radius: 15px;
+      /*margin-left: 7rem;
+      margin-right: 7rem;*/
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    
+
+    .pregunta {
+      padding: 1.5rem;
+      background: #e91e63;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .pregunta:hover {
+      background: #f06292;
+    }
+
+    .pregunta i {
+      transition: transform 0.3s ease;
+    }
+
+    .respuestas {
+      padding: 0 1.5rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      background: white;
+    }
+
+    .respuestas.active {
+      padding: 1.5rem;
+      max-height: 200px;
+    }
+
+    .caja-pregunta.active .pregunta i {
+      transform: rotate(180deg);
+    }
+
+/* GALERÍA */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .galeria-imagen {
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+    }
+
+    .galeria-imagen:hover {
+      transform: scale(1.05);
+    }
+
+    .galeria-imagen img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .descripcion {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.8));
+      color: white;
+      padding: 2rem 1rem 1rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /*------ Contacto------ */
+    .contacto {
+      background: #758aeb;
+      color: white;
+      text-align: center;
+    }
+
+    .contacto .subtitulo {
+      color: white;
+    }
+
+    .botones-contacto {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .formulario {
+      max-width: 500px;
+      margin: 2rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .formulario input, .formulario textarea {
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .formulario textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /*------ BOTÓN AGENDAR------*/
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-contenido {
+      background-color: white;
+      margin: 5% auto;
+      padding: 2rem;
+      border-radius: 20px;
+      width: 90%;
+      max-width: 500px;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+    }
+
+    .cerrar {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #999;
+      transition: color 0.3s ease;
+    }
+
+    .cerrar:hover {
+      color: #e91e63;
+    }
+
+    .pregunta {
+      margin-bottom: 1.5rem;
+    }
+
+    .pregunta label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .pregunta select, .pregunta input, .pregunta textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 2px solid #eee;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .pregunta select:focus, .pregunta input:focus, .pregunta textarea:focus {
+      border-color: #e91e63;
+      outline: none;
+    }
+
+    .boton-agendar {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: linear-gradient(45deg, #e91e63, #ff6b9d);
+      color: white;
+      border: none;
+      padding: 1rem 1.5rem;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .boton-agendar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(233, 30, 99, 0.4);
+    }
+
+    .icono-boton {
+      width: 24px;
+      height: 24px;
+    }
+
+    /*------ FOOTER ------*/
+    .footer {
+      background: #333;
+      color: white;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      color: #e91e63;
+      margin-bottom: 2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #e91e63;
+    }
+
+    .oculto {
+      display: none;
+    }
+
+    .logo {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.5rem;
+      color: #e91e63;
+      font-weight: 700;
+    }
